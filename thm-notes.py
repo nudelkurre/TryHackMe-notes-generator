@@ -36,7 +36,7 @@ def format_question(question):
 def write_notes(room):
     details = get_details(room)
     title = details['title']
-    with open(f"{title}.md".replace(" ", ""), "w") as f:
+    with open(f"{title}.md".replace(" ", "").replace("/", "_"), "w") as f:
         f.write(f"# {title}\n")
         if(args.name):
             f.write(f"{args.name}\n")
