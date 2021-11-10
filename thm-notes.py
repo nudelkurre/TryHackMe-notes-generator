@@ -6,7 +6,7 @@ import argparse
 import re
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-u", type=str, dest="url", required=True, help="Specify an url to a room")
+parser.add_argument("url", type=str, help="Specify an url to a room")
 parser.add_argument("-n", dest="name", help="Specify a name to put in the notes")
 args = parser.parse_args()
 
