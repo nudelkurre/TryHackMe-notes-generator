@@ -42,7 +42,7 @@ def write_notes(room):
             f.write(f"{args.name}\n")
         f.write(f"> {get_date()}\n")
         for t in get_tasks(room):
-            f.write(f"---\n## TASK {t['taskNo']}\n")
+            f.write(f"---\n## TASK {t['taskNo']} - {t['taskTitle']}\n")
             for q in t['questions']:
                 f.write(f"{format_question(q)}")
             
